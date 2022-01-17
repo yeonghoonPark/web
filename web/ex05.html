@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        .clearfix::after{content: '';display: block;clear: both;}
+        ul,ol,li{list-style: none;}
+        a{text-decoration: none;}
+        h1,h2,h3,h4,h5,h6{font-size: 1em;font-weight: 400;}
+        .wrap{
+            width: 100vw;
+            overflow: hidden;
+        }
+        .wrap>*{
+            padding: 9.5px 0;
+        }
+        .container{
+            margin: 0 16px;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .header{
+            /* background-color: rgba(255,0,0,0.2); */
+        }
+        .header h1{
+            float: left;
+        }
+        .header nav{
+            float: right;
+        }
+        .header nav li{
+            float: left;
+            margin-left: 10px;
+        }
+        .slider{
+            background-color: rgba(0,255,0,0.2);
+            padding: 0 !important;
+        }
+        .slider .container{
+            margin: 0;
+        }
+        .my-info{
+            background-color: rgba(0,0,255,0.2);
+        }
+        .my-photos{
+            background-color: rgba(255,255,0,0.2);
+        }
+        .footer{
+            background-color: rgba(255,0,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="container clearfix">
+                <h1>hoon profile</h1>
+                <nav>
+                    <ul class="clearfix">
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">history1</a></li>
+                        <li><a href="#">history2</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec sec01 slider">
+            <div class="container">
+                <div class="img-box">slider</div>
+            </div>
+        </section>
+        <section class="sec sec02 my-info">
+            <div class="container">
+                my-info
+            </div>
+        </section>
+        <section class="sec sec03 my-photos">
+            <div class="container">
+                my-photos
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                footer
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;text-align: center;}
+        .clearfix::after{content: '';display: block;clear: both;}
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header{
+            padding: 20px 0;
+            background-color: #f00;
+        }
+        nav{
+            float: left;
+            width: 25%;
+            padding: 100px 0;
+            background-color: #0f0;
+            
+        }
+        .sec01{
+            float: left;
+            width: 25%;
+            padding: 100px 0;
+            background-color: #00f;
+            
+        }
+        .sec02{
+            float: left;
+            width: 50%;
+            padding: 100px 0;
+            background-color: #0ff;
+        }
+        footer{
+            padding: 16px 0;
+            background-color: #f0f;
+        }
+
+        @media (max-width:1200px) {
+            nav{
+                height: 300px;
+                padding: 0;
+                line-height: 300px;
+            }
+            .sec01{
+                width: 75%;
+                height: 150px;
+                padding: 0;
+                line-height: 150px;
+            }
+            .sec02{
+                width: 75%;
+                height: 150px;
+                padding: 0;
+                line-height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header>header(block)</header>
+        <div class="clearfix">
+            <nav>nav(inline)</nav>
+            <section class="sec01">section01(inline)</section>
+            <section class="sec02">section02(inline)</section>
+        </div>
+        <footer>footer(block)</footer>
+
+    </section>
+</body>
+</html>
