@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        .clearfix::after{content: '';display: block;clear: both;}
+        img{width: 100%;vertical-align: top;}
+        .photos{
+            width: 410px;
+            margin: 50px auto;
+            /* border: 10px solid #ff3050; */
+            padding: 2px;
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+        .img-box{
+            width: 100px;
+            float: left;
+            margin-right: 2px;
+            overflow: hidden;   
+        }
+        .img-box img{
+            transition: 0.3s;
+        }
+        .img-box:hover img{
+            transform: scale(1.5) translate(-10%,10%);
+        }
+        .photo04,.photo08{
+            margin-right: 0;
+        }
+        .photo01,.photo02,.photo03,.photo04{
+            margin-bottom: 2px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="photos clearfix">
+        <div class="img-box photo01"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo02"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo03"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo04"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo05"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo06"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo07"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+        <div class="img-box photo08"><img src="./images/animal-6909429_1280.jpg" alt=""></div>
+    </div>
+</body>
+</html>

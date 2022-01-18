@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{box-sizing: border-box;margin: 0;padding: 0;}
+        .clearfix::after{content: '';display: block;clear: both;}
+        img{width: 100%;height: 100%;}
+        .box{
+            width: 1000px;
+            margin: 0 auto;
+            padding: 62.5px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .rotate-box{
+            float: left;
+            width: 250px;
+            margin-right: 62.5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            perspective: 500px;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .rotate-box:last-child{
+           margin-right: 0;
+        }
+        .rotate-box div{
+            height: 217px;
+           font-family: 900;
+           font-size: 40px;
+           text-align: center;
+           line-height: 400px;
+           color: #fff;
+           backface-visibility: hidden;
+           transition: 1s;
+        }
+        .front-box{
+            object-fit: contain;
+           /* background-color: rgb(255, 30, 30); */
+           position: absolute;
+           left: 0;
+           top: 0;
+           right: 0;
+           transform: rotateY(0deg);
+           
+        }
+        .back-box{
+           /* background-color: rgb(0, 80, 0); */
+           transform: rotateY(180deg);   
+        }
+        .rotate-box:hover .front-box{
+            transform: rotateY(180deg);
+        }
+        .rotate-box:hover .back-box{
+            transform: rotateY(360deg);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="rotate-box">
+            <div class="front-box">
+                <img src="./images/animal-6909429_1280.jpg" alt="고양이">
+            </div>
+            <div class="back-box">
+                <img src="./images/cat-2536662_1280.jpg" alt="">
+            </div>
+        </div>
+        <div class="rotate-box">
+            <div class="front-box">
+                <img src="./images/animal-6909429_1280.jpg" alt="고양이">
+            </div>
+            <div class="back-box">
+                <img src="./images/cat-2536662_1280.jpg" alt="">    
+            </div>
+        </div>
+        <div class="rotate-box">
+            <div class="front-box">
+                <img src="./images/animal-6909429_1280.jpg" alt="고양이">
+            </div>
+            <div class="back-box">
+                <img src="./images/cat-2536662_1280.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

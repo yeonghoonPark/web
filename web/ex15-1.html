@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{box-sizing: border-box;margin: 0;padding: 0;}
+        .clearfix::after{content: '';display: block;clear: both;}
+        img{
+            width: 100%;
+            vertical-align: top;
+            opacity: 0.5;
+            transition: width 1s 0.5s, opacity 5s, border-radius 1s;
+            
+        }
+        .box{
+            width: 500px;
+            margin: 0;
+            /* float: right; */
+            border: 2px solid #f00;
+            /* transition: float 0.5s; 작동되지 않음 */
+            transition: transform 1s, border-radius 2s;
+        }
+        .box:hover{
+            /* float: left; */
+            /* margin: 0 0 0 200px; */
+            transform: translate(20%,20%) rotate(360deg);
+            border-radius: 50%;
+            
+        }
+        .img-box:hover img{
+            width: 120%;
+            opacity: 1;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="img-box"><img src="./images/animal-6909429_1280.jpg" alt="고양이"></div>
+    </div>
+</body>
+</html>

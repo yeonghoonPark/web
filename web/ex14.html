@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        .clearfix::after{content: '';display: block;clear: both;}
+        .box{
+            position: fixed;
+            /* left: 100px; */
+            /* top: 100px; */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url('./images/animal-6909429_1280.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            /* transition: 1s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        window.onload = function(){
+            let mouseCircle = document.querySelector('.box');
+
+            document.addEventListener('mousemove',function(e){
+                let mouseX = e.clientX;
+                let mouseY = e.clientY;
+                console.log(mouseX,mouseY);
+                // mouseCircle.style.width = '50px';
+                // mouseCircle.style.heigth = '50px';
+                mouseCircle.style.left = (mouseX - 100) + 'px';
+                mouseCircle.style.top = (mouseY - 100) + 'px';
+
+            })
+        }
+    </script>
+</body>
+</html>
