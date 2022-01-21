@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 변수, 함수</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        :root{
+            --set-red: red;
+            --main-color: #8b0000;
+            --sub-color: #ff4444;
+            --txt-color: #666666;
+            --box-height: 10px;
+            
+        }
+        header{
+           height: 10rem;
+           background-color: var(--main-color);
+        }
+        section{
+            height: 60rem;
+            background-color: var(--sub-color);
+        }
+        footer{
+            height: 15rem;
+            color: var(--txt-color);
+            background-color: var(--set-red);
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <section></section>
+    <footer></footer>
+</body>
+</html>

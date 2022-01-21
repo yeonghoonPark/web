@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        img{width: 100%;vertical-align: top;}
+        ul,ol,li{list-style: none;}
+        a{text-decoration: none;color: inherit;}
+        h1,h2,h3,h4,h5,h6{font-weight: 400;font-size: 1em;}
+
+        :root{
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #666;
+        }
+
+        body{
+            background-color: #ebfaff;
+        }
+        .wrap{
+            max-width: 520px;
+            margin: 72px auto;
+            padding: 50px 45px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .header ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .header a{
+            font-size: 1.6em;
+        }
+        .profile{
+            margin-bottom: 48px;
+        }
+        .profile .img-profile{
+            width: 69.76744186046512%;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 10px 10px 30px 0 rgba(53, 224, 247, 0.5);
+        }
+         
+        
+        h1{
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 2em;
+            color: #555;
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 48px;
+            font-family: sans-serif;
+            font-weight: 500;
+            font-size: 1.2em;
+            color: #bbb;
+            text-align: center;
+        }
+
+        button{
+            display: block;
+            width: 62.79094186046400%;
+            height: 48px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 30px;
+            background-color: #44f6fd;
+            font-weight: 700;
+            font-size: 1em;
+            color: #fff;
+            box-shadow: 10px 20px 30px 0 rgba(68, 246, 253, 0.6);
+        }
+
+        .contact{
+            margin-bottom: 40px;
+        }
+        .contact li{
+            padding: 20px;
+            font-size: 1.1em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        
+        .contact li i{
+            font-size: 1.2em;
+            color: #555;
+            flex: 1;
+        }
+        .contact li a{
+            flex: 4;
+        }
+        .contact li::after{
+            content: '';
+            display: block;
+            flex: 1;
+        }
+        .contact .facebook{
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .footer ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+        }
+        .footer ul li{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #35e0f7;
+            text-indent: -9999999px;
+            box-shadow: 7px 7px 10px rgba(53, 224, 247, 0.5);
+        }
+        .footer ul li:nth-child(2){
+            background-color: #c9f6eb;
+            box-shadow: 7px 7px 10px rgba(201, 246, 235, 0.5);
+        }
+        .footer ul li:nth-child(3){
+            background-color: #f3cfea;
+            box-shadow: 7px 7px 10px rgba(243, 207, 234, 0.5);
+        }
+        .footer ul li:nth-child(4){
+            background-color: #dad5f2;
+            box-shadow: 7px 7px 10px rgba(218, 213, 242, 0.5);
+        }
+
+        .wrap.theme01 .img-profile{
+            box-shadow: 10px 10px 30px 0 rgba(53, 224, 247, 0.5);
+        }
+        .wrap.theme01 .btn-view{
+            background-color: rgb(53, 224, 247);
+            box-shadow: 7px 7px 10px rgba(53, 224, 247, 0.5);
+        }
+        .wrap.theme02 .img-profile{
+            box-shadow: 10px 10px 30px 0 rgba(201, 246, 235, 1);
+        }
+        .wrap.theme02 .btn-view{
+            background-color: rgb(201, 246, 235);
+            box-shadow: 7px 7px 10px rgba(201, 246, 235, 0.7);
+        }
+        .wrap.theme03 .img-profile{
+            box-shadow: 10px 10px 30px 0 rgba(243, 207, 234, 1);
+        }
+        .wrap.theme03 .btn-view{
+            background-color: rgb(243, 207, 234);
+            box-shadow: 7px 7px 10px rgba(243, 207, 234, 0.7);
+        }
+        .wrap.theme04 .img-profile{
+            box-shadow: 10px 10px 30px 0 rgba(218, 213, 242, 1);
+        }
+        .wrap.theme04 .btn-view{
+            background-color: rgb(218, 213, 242);
+            box-shadow: 7px 7px 10px rgba(218, 213, 242, 0.7);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <section class="wrap theme01">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li class="btn-nav"><a href="#"><i class="fas fa-bars"></i></a></li>
+                    <li class="btn-new"><a href="#"><i class="far fa-sticky-note"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="sec profile">
+            <div class="img-box img-profile">
+                <img src="./images/animal-1_02.png" alt="고양이">
+            </div>
+            <h1>
+                <a href="#">DCODELAB</a>
+            </h1>
+            <h2>UI/UX INTERACTIVE DEVELOPER</h2>
+            <button class="btn-view" type="button">VIEW MORE</button>
+        </section>
+        <section class="sec contact">
+            <ul>
+                <li class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <a href="#">Visit my facebook page.</a>
+                </li>
+                <li class="email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:goyang2@naver.com">goyang2@naver.com</a>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <ul>
+                <li class="btn-theme" id="theme01">1</li>
+                <li class="btn-theme" id="theme02">2</li>
+                <li class="btn-theme" id="theme03">3</li>
+                <li class="btn-theme" id="theme04">4</li>
+            </ul>
+        </footer>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            let target = $('.wrap');
+            $('.btn-theme').on({
+                'click':function(){
+                    let thisId = $(this).attr('id');
+                    target.removeClass('theme01 theme02 theme03 theme04');
+                    target.addClass(thisId);
+                    if(thisId=='theme01'){
+                        $('img').attr('src','./images/animal-1_02.png');
+                    }else if(thisId=='theme02'){
+                        $('img').attr('src','./images/theme02.png');
+                    }else if(thisId=='theme03'){
+                        $('img').attr('src','./images/animal-1_02.png');
+                    }else if(thisId=='theme04'){
+                        $('img').attr('src','./images/theme02.png');
+                    }
+                    
+                    // let imgNum = thisId[thisId.length-1];
+                    // $('img').attr('src','./images/theme0'+imgNum+'.png');
+                }
+            })
+            // let now = new Date();
+            // let nowHour = now.getHours();
+            // if(nowHour<6){
+            //     target.removeClass('theme01 theme02 theme03 theme04');
+            //     target.addClass('theme01');
+            //     $('img').attr('src','./images/theme01.png');
+            // }else if(nowHour<12){
+            //     target.removeClass('theme01 theme02 theme03 theme04');
+            //     target.addClass('theme02');
+            //     $('img').attr('src','./images/theme02.png');
+            // }else if(nowHour<18){
+            //     target.removeClass('theme01 theme02 theme03 theme04');
+            //     target.addClass('theme03');
+            //     $('img').attr('src','./images/theme03.png');
+            // }else if(nowHour<24){
+            //     target.removeClass('theme01 theme02 theme03 theme04');
+            //     target.addClass('theme04');
+            //     $('img').attr('src','./images/theme04.png');
+            // }
+        })   
+    </script>
+</body>
+</html>

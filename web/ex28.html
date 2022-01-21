@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+        .child{
+            /* flex: 1; */
+            height: 100px;
+
+        }
+        .child:nth-of-type(1){
+            background-color: rgba(255, 0, 0, 0.2);
+            flex: 1;
+            order: 5;
+            align-self: flex-start;
+        }
+        .child:nth-of-type(2){
+            background-color: rgba(0, 255, 0, 0.2);
+            flex: 5;
+            order: 3;
+            align-self: flex-end;
+        }
+        .child:nth-of-type(3){
+            background-color: rgba(0, 0, 255, 0.2);
+            flex: 3;
+            order: 2;
+            align-self: flex-start;
+        }
+        .child:nth-of-type(4){
+            background-color: rgba(255, 255, 0, 0.2);
+            flex: 2;
+            order: 1;
+        }
+        .child:nth-of-type(5){
+            background-color: rgba(255, 0, 255, 0.2);
+            flex: 6;
+            order: 4;
+            align-self: stretch;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+    </div>
+</body>
+</html>

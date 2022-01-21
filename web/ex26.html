@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        .wrap{
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .box{
+            /* width: 100%; */
+            height: 500px;
+            margin: 0;
+            border: 10px solid #000;
+            padding: 20px;
+            background-color: #f00;
+            /* 플렉스 컨테이너 */
+            display: flex;
+            /* 플렉스 컨테이너 주축 방향 */
+            flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row;
+            /* 플렉스 컨테이너 보조축 방향의 사용유무 */
+            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            /* flex-direction + flex-wrap = flex-flow */
+            flex-flow: row nowrap;
+            flex-flow: column nowrap;
+            flex-flow: row wrap;
+
+            /* 아이템 주축 맞춤 */
+            justify-content: flex-start;
+            justify-content: center;
+            justify-content: flex-end;
+            justify-content: space-around;
+            justify-content: space-evenly;
+            justify-content: space-between;
+
+            /* 아이템이 1행이나 1열일 때, 보조축 맞춤 */
+            align-items: flex-start;
+            align-items: center;
+            align-items: flex-end;
+            align-items: stretch;
+
+            /* 아이템이 여러개의 행이나 열일 때, 보조축 맞춤 */
+            align-content: flex-start;
+            align-content: center;
+            align-content: flex-end;
+            align-content: space-around;
+            align-content: space-between;
+            
+        }
+        .child-box{  
+            /* width: 23.77049180327869%;
+            height: 100%;
+            margin-right: 1.639344262295082%;
+            float: left; */
+            /* width: 23.77049180327869%; */
+            width: 290px;
+            height: 50px;
+            /* margin-right: 20px; */
+            /* margin-right: 20px; */
+        }
+        .child-box01{
+            background-color: #0f0;
+            /* flex: 1; */
+            
+        }
+        .child-box02{
+            background-color: #00f;
+            /* flex: 2; */
+            
+        }
+        .child-box03{
+            background-color: #ff0;
+            /* flex: 4; */
+            
+        }
+        .child-box04{
+            background-color: #0ff;
+            /* flex: 1; */
+            /* margin-right: 0; */
+        }
+        /* .after{
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="child-box child-box01"></div>
+            <div class="child-box child-box02"></div>
+            <div class="child-box child-box03"></div>
+            <div class="child-box child-box04"></div>
+        </div>
+    </div>
+</body>
+</html>
